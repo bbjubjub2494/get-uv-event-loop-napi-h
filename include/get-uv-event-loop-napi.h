@@ -9,8 +9,8 @@
 #endif
 
 inline
-uv_loop_t* get_uv_event_loop(napi_env env) {
-  typedef napi_status (*get_uv_event_loop_fn)(napi_env env, uv_loop_t** loop);
+uv_loop_t* get_uv_event_loop(node_api_nogc_env env) {
+  typedef napi_status (*get_uv_event_loop_fn)(node_api_nogc_env env, uv_loop_t** loop);
   get_uv_event_loop_fn napi_get_uv_event_loop__ = NULL;
   uint32_t napi_version = 0;
   napi_status status;
